@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+<div class="flex justify-center items-center h-screen">
+  <div class="card bg-base-200 shadow-xl w-6/12 mx-auto">
+    <form class="text-center" action="/" method="post" enctype="multipart/form-data">
+      <label for="csvUpload" class="my-3 mx-3">Upload Excel File / Class List : </label>
+      <input name="csvUpload" type="file" class="file-input file-input-bordered w-full max-w-xs my-3 mx-3" accept=".xls, .xlsx" required>
+      <div class="flex justify-center mx-3"> <!-- Flex container for Email and Password -->
+        <input name="emailInput" class="input input-bordered input-primary mb-3" placeholder="Email" type="text" required>
+        <input name="passInput" class="input input-bordered input-secondary mb-3 ml-3" placeholder="Password" type="text" required>
+      </div>
+      <input name="subjectInput" class="input input-bordered mb-3 mx-3" type="text" placeholder="Subject">
+      <div class="flex justify-center items-center mx-3"> <!-- Flex container for Header Image -->
+        <label for="headerUpload" class="mr-3">Header Text:</label>
+        <input name="headerText" class="input input-bordered w-full max-w-xs my-3" type="text" placeholder="Enter header url.." required>
+      </div>
+      <div class="flex justify-center items-center p-3">
+        <div class="card border-base-300 shadow-xl w-6/12 h-96 mx-auto">
+            <textarea name="contentInput" class="textarea textarea-bordered textarea-ghost h-96 mb-3 w-full" placeholder="Enter email content" required></textarea>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mx-3"> <!-- Flex container for Footer Image -->
+        <label for="footerUpload" class="mr-3">Footer Text:</label>
+        <input name="footerText" class="input input-bordered w-full max-w-xs my-3" type="text" placeholder="Enter footer url.." required>
+      </div>
+      <input class="btn btn-ghost btn-outline mx-3" type="submit" value="Send">
+    </form>
+  </div>
+</div>
+
+{% include 'footer.html' %}
