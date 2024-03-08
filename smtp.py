@@ -75,6 +75,7 @@ def sendEmail(sender_email, password, subject, content, header, footer, recipien
             
             # Send the email
             smtp_server.sendmail(sender_email, receiver_email, message.as_string())
+            print(f"email sent {name}")
 
         smtp_server.quit()
         print("Emails sent successfully!")
